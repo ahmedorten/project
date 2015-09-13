@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: mohamed
+  last_name: sobhy
+  phone: 0112398765
+  gender: male
+  password: 12345678
+  email: mohamed@yahoo.com
+  username: mohamedss
+  user_type_id: 2
+
+two:
+  first_name: mahmoud
+  last_name: ahmed
+  phone: 01023443534
+  gender: male
+  password: 12345678
+  email: mahmoud@gmail.com
+  username: mahmoud.ahmed
+  user_type_id: 1

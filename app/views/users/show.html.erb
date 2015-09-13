@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+
+<div class="col-lg-12">
+  <% if current_user.user_type_id==1 %>
+  <h2>Users List</h2>
+   <%end%>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td>
+<p>
+  <strong>First name:</strong>
+  </td>
+  <td>
+  <%= @user.first_name %>
+  </td>
+</p>
+</tr>
+
+<tr>
+      <td>
+<p>
+   <strong>Last name:</strong>
+  </td>
+  <td>
+  <%= @user.last_name %>
+  </td>
+</p>
+</tr>
+
+<tr>
+      <td>
+<p>
+  <strong>Phone:</strong>
+  </td>
+  <td>
+  <%= @user.phone %>
+  </td>
+</p>
+</tr>
+
+<tr>
+      <td>
+<p>
+  <strong>Gender:</strong>
+  </td>
+  <td>
+  <%= @user.gender %>
+  </td>
+</p>
+</tr>
+
+<tr>
+      <td>
+<p>
+  <strong>Email:</strong>
+  </td>
+  <td>
+  <%= @user.email %>
+  </td>
+</p>
+</tr>
+
+<tr>
+      <td>
+<p>
+  <strong>Username:</strong>
+  </td>
+  <td>
+  <%= @user.username %>
+  </td>
+</p>
+</tr>
+
+</table>
+<br>
+
+</div>
+
+
+
+<button class="btn btn-primary"><%= link_to 'Edit', edit_user_path(@user) , {:style=>"color:#fff; text-decoration:none; background-color: transparent;"} %></button>
+<button class="btn btn-primary"><%= link_to 'Back', users_path , {:style=>"color:#fff; text-decoration:none; background-color: transparent;"} %></button>
+
+

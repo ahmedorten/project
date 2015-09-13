@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<% if current_user.user_type_id != 1 %>
+<div class="buy_now_button"><%= link_to 'Add new Book', new_book_path %></div>
+<%end%>
+<h1>Listing Books </h1>
+<% @book.each do |book| %>
+
+<div class="templatemo_product_box container" >
+
+
+    <h1><%= book.name %> <span></span></h1>
+    <%= image_tag book.avatar.url, :size => "100x160" %>
+    <div class="product_info">
+      <h5> Price :<%= book.price %></h5>
+      <h5> Status : <%= book.status %></h5>
+      <h5> Category :  <%= book.category.name  %></h5>
+      <% if current_user.id == book.user_id || current_user.user_type_id ==1 %>
+      <% if current_user.id == book.user_id %>
+      <div class="detail_button"><%= link_to 'Edit', edit_book_path(book) %> </div>
+      <%end%>
+      <div class="detail_button"><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %> </div>
+      <% end %>
+      <div class="buy_now_button"><%= link_to 'Details', book %></div>
+    </div>
+    <div class="cleaner">&nbsp;</div>
+  </div>
+
+
+
+
+
+
+  <% end %>
+
+
+
+  <br>
+
+
